@@ -1,6 +1,5 @@
 import { GridContainer, StyledGrid } from "../styles/grid.css";
 
-
 export default function Grid({ grid, handleClick }) {
     const classList = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine']
     const gridElements = classList.map((item, id) => {

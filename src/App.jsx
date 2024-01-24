@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react'
 import Grid from './components/Grid'
-import { Container, Title } from './styles/app.css'
+import { Container, ResultsContainer, Title, TitleContainer } from './styles/app.css'
 import { GlobalStyles } from './styles/global.css'
 import Circle from "./components/Circle";
 import Cross from "./components/Cross";
+import Button from './components/Button';
 
 export default function App() {
     const [current, setCurrent] = useState(<Circle />)
@@ -41,7 +42,13 @@ export default function App() {
                 }
             })
         }
+        function checkDraw() {
+            if (grid.every(item => item.value !== null)) {
+                setWinner('Draw')
+            }
+        }
         checkWinner()
+        checkDraw()
     }, [grid])
 
     function handleClick(e) {
@@ -56,15 +63,31 @@ export default function App() {
 
     return (
         <>
-        <GlobalStyles />
-        <Container>
-            { winner ? <Title>{winner} wins!</Title> : 
-                <>
-                <Title>Tic<br/>Tac<br/>Toe</Title>
-                <Grid grid={grid} handleClick={handleClick} />
-                </>
-            } 
-        </Container>
+            <GlobalStyles />
+            <Container>
+                { winner ? 
+                    <ResultsContainer>
+                        <Title>
+                            {
+                                winner === 'Draw' ? 
+                                    'Draw!' 
+                                    : 
+                                    `${winner} wins!`
+                            }
+                        </Title> 
+                        <Button setGrid={setGrid} setWinner={setWinner} setCurrent={setCurrent} />
+                    </ResultsContainer>
+                    : 
+                    <>
+                        <TitleContainer>
+                            <Title>Tic</Title>
+                            <Title>Tac</Title>
+                            <Title>Toe</Title>
+                        </TitleContainer>
+                        <Grid grid={grid} handleClick={handleClick} />
+                    </>
+                } 
+            </Container>
         </>
     )
 }

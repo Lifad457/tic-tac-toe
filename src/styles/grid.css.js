@@ -39,5 +39,5 @@ export const GridContainer = styled.div`
 export const StyledGrid = styled.div`
     display: flex;
     align-items: center;
-    border: .2rem solid var(--secondary-color);
+    border: .1rem solid var(--secondary-color);
 `

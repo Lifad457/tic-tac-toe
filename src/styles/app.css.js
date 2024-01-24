@@ -9,7 +9,6 @@ export const Container = styled.div`
 export const Title = styled.h1`
     display: flex;
     align-items: center;
-    padding-left: 5rem;
     font-family: 'Pacifico', cursive;
     font-size: 7rem;
     color: var(--secondary-color);
@@ -19,4 +18,20 @@ export const Title = styled.h1`
         0 0 2.625rem var(--secondary-color),
         0 0 4.8rem var(--secondary-color),
         0 0 6.25rem var(--secondary-color);
+
+    transition: all .6s ease-in-out;
+    &:hover, &:focus {
+        transform: scale(1.5);
+    }
+`
+export const TitleContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+`
+export const ResultsContainer = styled.div`
+    display: flex;
+    gap: 3rem;
+    flex-direction: column;
+    justify-content: center;
 `
