@@ -33,29 +33,28 @@ export default function App() {
                 [4, 5, 6],
                 [7, 8, 9]
             ]
+            let itsWin = false
             winningCombos.map((item) => {
                 const [a, b, c] = item
                 if (grid[a-1].value !== null 
                     && grid[a-1].value?.type.name === grid[b-1].value?.type.name 
                     && grid[b-1].value?.type.name === grid[c-1].value?.type.name) {
                     setWinner(grid[a-1].value.type.name)
+                    itsWin = true
                 }
             })
-        }
-        function checkDraw() {
-            if (grid.every(item => item.value !== null)) {
+            if (grid.every(item => item.value !== null) && !itsWin) {
                 setWinner('Draw')
             }
         }
         checkWinner()
-        checkDraw()
     }, [grid])
 
     function handleClick(e) {
         const target = e.target.id
         grid[target].value === null && setCurrent(current.type.name==='Circle' ? <Cross /> : <Circle />)
         setGrid(prevGrid => prevGrid.map(item => (
-            item.id == target && !item.value ? 
+            item.id.toString() === target && !item.value ? 
             {...item, value: current.type.name==='Circle' ? <Circle id={target} /> : <Cross id={target} />} 
             : {...item}
         )))

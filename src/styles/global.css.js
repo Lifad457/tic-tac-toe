@@ -32,6 +32,8 @@ export const GlobalStyles = createGlobalStyle`
 
     body {
         background-image: url(${BG});
-        background-size: contain;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100dvh;
     }
 `

@@ -3,8 +3,9 @@ import styled from "styled-components";
 export const Container = styled.div`
     display: flex;
     flex-direction: row;
-    height: 100vh;
     justify-content: center;
+    gap: 5rem;
+    height: 100dvh;
 `
 export const Title = styled.h1`
     display: flex;
@@ -21,7 +22,7 @@ export const Title = styled.h1`
 
     transition: all .6s ease-in-out;
     &:hover, &:focus {
-        transform: scale(1.5);
+        transform: scale(1.3);
     }
 `
 export const TitleContainer = styled.div`

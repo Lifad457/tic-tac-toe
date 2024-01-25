@@ -2,9 +2,9 @@ import styled from "styled-components";
 
 export const GridContainer = styled.div`
     display: grid;
-    grid-template-columns: repeat(3, minmax(15rem, 1fr));
-    grid-template-rows: repeat(3, minmax(15rem, 1fr));
-    margin: auto 10rem;
+    grid-template-columns: repeat(3, minmax(15rem, auto));
+    grid-template-rows: repeat(3, minmax(15rem, auto));
+    margin: auto 0;
     cursor: pointer;
     
     .one {
