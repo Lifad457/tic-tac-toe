@@ -31,9 +31,9 @@ export const GlobalStyles = createGlobalStyle`
     }
 
     body {
+        display: flex;
+        justify-content: center;
         background-image: url(${BG});
         background-size: cover;
-        background-repeat: no-repeat;
-        height: 100dvh;
     }
 `

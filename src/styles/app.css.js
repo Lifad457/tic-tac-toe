@@ -3,9 +3,14 @@ import styled from "styled-components";
 export const Container = styled.div`
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    gap: 5rem;
-    height: 100dvh;
+    height: 100vh;
+    gap: 4rem;
+
+    @media screen and (max-width: 1080px) {
+        flex-direction: column;
+        justify-content: center;
+        gap: 0;
+    }
 `
 export const Title = styled.h1`
     display: flex;
@@ -29,6 +34,12 @@ export const TitleContainer = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+
+    @media screen and (max-width: 1080px) {
+        flex-direction: row;
+        padding: 2rem;
+    }
 `
 export const ResultsContainer = styled.div`
     display: flex;
