@@ -4,9 +4,8 @@ export const GridContainer = styled.div`
     display: grid;
     grid-template-columns: repeat(3, minmax(14rem, auto));
     grid-template-rows: repeat(3, minmax(14rem, auto));
-    padding: 3rem;
-    margin: auto;
     cursor: pointer;
+    margin: 0 auto;
     
     .one {
         border-top: none;

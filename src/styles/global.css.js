@@ -32,8 +32,15 @@ export const GlobalStyles = createGlobalStyle`
 
     body {
         display: flex;
+        flex-direction: column;
         justify-content: center;
         background-image: url(${BG});
         background-size: cover;
+        min-height: 100dvh;
+
+        @media screen and (min-width: 1080px) {
+            flex-direction: row;
+                align-items: center;
+        }
     }
 `

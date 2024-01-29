@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import Grid from './components/Grid'
-import { Container, ResultsContainer, Title, TitleContainer } from './styles/app.css'
+import { Container, Results, ResultsContainer, Title, TitleContainer } from './styles/app.css'
 import { GlobalStyles } from './styles/global.css'
 import Circle from "./components/Circle";
 import Cross from "./components/Cross";
@@ -66,14 +66,14 @@ export default function App() {
             <Container>
                 { winner ? 
                     <ResultsContainer>
-                        <Title>
+                        <Results>
                             {
                                 winner === 'Draw' ? 
                                     'Draw!' 
                                     : 
                                     `${winner} wins!`
                             }
-                        </Title> 
+                        </Results> 
                         <Button setGrid={setGrid} setWinner={setWinner} setCurrent={setCurrent} />
                     </ResultsContainer>
                     : 
