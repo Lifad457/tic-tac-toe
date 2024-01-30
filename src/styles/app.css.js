@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const Container = styled.div`
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
 
     @media screen and (min-width: 1080px) {
         flex-direction: row;
@@ -46,13 +45,10 @@ export const ResultsContainer = styled.div`
     flex-direction: column;
 `
 export const Results = styled.div`
-    display: flex;
-    flex-direction: column;
     font-family: 'Pacifico', cursive;
     font-size: 7rem;
     color: var(--secondary-color);
     padding: .5rem;
-    margin: auto;
 
     text-shadow: 
         0 0 0.45rem var(--primary-color),

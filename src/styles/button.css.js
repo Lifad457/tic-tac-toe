@@ -10,6 +10,7 @@ export const StyledButton = styled.div`
     font-family: 'Pacifico', cursive;
     font-size: 2rem;
     color: var(--secondary-color);
+    
     text-shadow: 
         0 0 0.45rem var(--primary-color),
         0 0 0.625rem var(--primary-color),

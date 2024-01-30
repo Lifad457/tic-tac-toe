@@ -17,6 +17,7 @@ export default function Button({ setGrid, setWinner, setCurrent }) {
         setWinner(null)
         setCurrent(<Circle />)
     }
+    
     return (
         <StyledButton onClick={handleClick}>
             Play again!
