@@ -39,12 +39,17 @@ export default function App() {
                 if (grid[a-1].value !== null 
                     && grid[a-1].value?.type.name === grid[b-1].value?.type.name 
                     && grid[b-1].value?.type.name === grid[c-1].value?.type.name) {
-                    setWinner(grid[a-1].value.type.name)
-                    itsWin = true
+                    setTimeout(() => {
+                        setWinner(grid[a-1].value.type.name)
+                        itsWin = true
+                    }, 500)
+                    
                 }
             })
             if (grid.every(item => item.value !== null) && !itsWin) {
-                setWinner('Draw')
+                setTimeout(() => {
+                    setWinner('Draw')
+                }, 500)
             }
         }
         checkWinner()
